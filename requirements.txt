@@ -1,0 +1,17 @@
+requests
+dotenv
+fastapi 
+uvicorn
+pydantic
+langchain-text-splitters 
+langchain-community 
+langgraph
+langchain-google-genai
+ollama
+langchain-ollama
+langchain-pinecone
+pinecone
+pinecone[grpc]
+langchain-huggingface
+sentence-transformers
+pymupdf

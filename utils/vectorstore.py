@@ -36,7 +36,7 @@ def initialisevectorstore(namespace:str):
 # print(index.describe_index_stats())
 # print(vector_store)
 
-def store_documents(all_splits, vector_store):
-    document_ids = vector_store.add_documents(documents=all_splits)
+async def store_documents(all_splits, vector_store):
+    document_ids = await vector_store.add_documents(documents=all_splits)
 
     print(document_ids[:3])

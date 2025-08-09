@@ -31,9 +31,9 @@ app.add_middleware(
 #     return True
 
 @app.post("/api/v1/hackrx/run", response_model=RunResponse)
-def hackrx_run(payload: RunRequest):
+async def hackrx_run(payload: RunRequest):
     try:
-        answers = run_rag(payload.documents, payload.questions)
+        answers = await run_rag(str(payload.documents), payload.questions)
         return RunResponse(answers=answers)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

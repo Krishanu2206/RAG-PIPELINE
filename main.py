@@ -4,6 +4,7 @@ from fastapi import FastAPI, HTTPException, Depends, Header
 from models import RunRequest, RunResponse
 from services import run_rag
 from fastapi.middleware.cors import CORSMiddleware
+import os, uvicorn
 
 origins = [
     "*"
@@ -46,6 +47,5 @@ def greet(name: str):
     return {"message": f"Hello, {name}!"}
 
 if __name__ == "__main__":
-    import os, uvicorn
     port = int(os.getenv("PORT", "10000"))
     uvicorn.run("main:app", host="0.0.0.0", port=port)

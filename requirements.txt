@@ -15,3 +15,4 @@ pinecone[grpc]
 langchain-huggingface
 sentence-transformers
 pymupdf
+ipython

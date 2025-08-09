@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI, HTTPException, Depends, Header
 # from typing import Optional
 # from config import API_KEY
@@ -45,3 +44,8 @@ def read_root():
 @app.get("/greet/{name}")
 def greet(name: str):
     return {"message": f"Hello, {name}!"}
+
+if __name__ == "__main__":
+    import os, uvicorn
+    port = int(os.getenv("PORT", "10000"))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)

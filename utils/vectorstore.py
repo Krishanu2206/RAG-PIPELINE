@@ -17,7 +17,7 @@ def _ensure_index(pc: Pinecone, name: str):
             spec=ServerlessSpec(cloud="aws", region="us-east-1"),
         )
     
-def initialisevectorstore(namespace:str="__default__"):
+def initialisevectorstore(namespace:str):
     PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
     pc = Pinecone(PINECONE_API_KEY)
     index_name=os.getenv("PINECONE_INDEX_NAME", "useless")

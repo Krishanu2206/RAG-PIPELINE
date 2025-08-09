@@ -2,7 +2,7 @@ from pydantic import BaseModel, HttpUrl
 from typing import List
 
 class RunRequest(BaseModel):
-    documents: HttpUrl
+    documents: str
     questions: List[str]
 
 class RunResponse(BaseModel):

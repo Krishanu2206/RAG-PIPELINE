@@ -1,5 +1,4 @@
 
-# main.py
 from fastapi import FastAPI, HTTPException, Depends, Header
 # from typing import Optional
 # from config import API_KEY
@@ -11,7 +10,7 @@ origins = [
     "*"
 ]
 
-app = FastAPI(title="HackRx API", version="1.0.0")
+app = FastAPI(title="RAG", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,

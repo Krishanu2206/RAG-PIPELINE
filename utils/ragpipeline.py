@@ -5,7 +5,7 @@ from utils.prompt import prompt
 from utils.vectorstore import initialisevectorstore, store_documents
 from utils.types import State, Search
 from langgraph.graph import START, StateGraph
-from IPython.display import Image, display
+# from IPython.display import Image, display
 import time, hashlib, os
 
 def analyze_query(state: State):
@@ -92,7 +92,7 @@ def rag_pipeline(doc_url:str, questions:list[str]) -> list[str]:
     graph_builder.add_edge(START, "analyze_query")
     graph = graph_builder.compile()
 
-    display(Image(graph.get_graph().draw_mermaid_png()))
+    # display(Image(graph.get_graph().draw_mermaid_png()))
 
     answers=[]
 

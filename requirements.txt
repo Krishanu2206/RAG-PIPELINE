@@ -16,3 +16,6 @@ langchain-huggingface
 sentence-transformers
 pymupdf
 ipython
+beautifulsoup4>=4.12.0
+weasyprint>=60.0
+aiohttp>=3.8.0
